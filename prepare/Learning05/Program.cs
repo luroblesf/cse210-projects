@@ -7,13 +7,13 @@ class Program
     {
         List<Shape> shapes = new List<Shape>();
 
-        Square shape1 = new Square("black", 5);
+        Square shape1 = new Square("white", 5);
         shapes.Add(shape1);
 
         Rectangle shape2 = new Rectangle("red", 3, 2);
         shapes.Add(shape2);
 
-        Circle shape3 = new Circle("yellow", 5);
+        Circle shape3 = new Circle("yellow", 6);
         shapes.Add(shape3);
 
         
