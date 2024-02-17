@@ -1,0 +1,5 @@
+Program 1: Abstraction with YouTube Videos
+This program will store the information of users who write comments on YouTube videos, and count the number of comments.
+
+Program 2: Encapsulation with Online Ordering
+The function of this program will be to keep a record of the products requested, as well as the shipping, labeling, packaging, and shipping to the customer, determining whether the customer is in the United States or not. 

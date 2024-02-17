@@ -1,11 +1,11 @@
 using System;
 
-public class Order 
+public class Order
 {
     private List<Product> _products;
     private Customer _customer;
 
-    public Order(List<Product> products, Customer customer)
+    public Order(List<Product> products, Customer customer) 
     {
         _products = products;
         _customer = customer;
@@ -68,9 +68,9 @@ public class Order
 
     public void DisplayResults()
     {
-        string packingLabel = GeneratePackingLabel();
-        string shippingLabel = GenerateShippingLabel();
-        string totalCost = GenerateTotalCost();
+        string packingLabel = PackingLabel();
+        string shippingLabel = ShippingLabel();
+        string totalCost = GetTotalCost();
 
         Console.WriteLine(packingLabel);
         Console.WriteLine(shippingLabel);
