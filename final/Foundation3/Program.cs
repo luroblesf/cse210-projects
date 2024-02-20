@@ -34,9 +34,9 @@ class Program
         Console.WriteLine();
         Console.WriteLine(reception.GenerateShortReception());
 
-        Address addressOG = new Address("8325 University Avenue La Mesa", "San Diego", "California", "USA");
+        Address addressOG = new Address("Central Park", "Quetzaltenango", "Quetzaltenango", "Guatemala");
 
-        OutdoorGathering outdoorGathering = new OutdoorGathering("Mother's Day Special!", "I love my Mother", "May 14, 2024 ", "5:30 - 7:30pm PDT", addressOG, "cloudy");
+        OutdoorGathering outdoorGathering = new OutdoorGathering("Mother's Day Special!", "I love my Mother", "May 14, 2024 ", "5:30 - 7:30pm PDT", addressOG, "sunny");
         Console.WriteLine();
 
         Console.WriteLine("Event Number: 3");
