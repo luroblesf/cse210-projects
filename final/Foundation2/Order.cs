@@ -5,56 +5,54 @@ public class Order
     private List<Product> _products;
     private Customer _customer;
 
-    public Order(List<Product> products, Customer customer) 
+    public Order(List<Product> products, Customer customer)
     {
         _products = products;
         _customer = customer;
     }
 
-    public float CalculateShipping() 
+    public double CalculateShipping() 
     {
-        float shippingCost = _customer.usaCustomer() ? 5 : 35;
+        double shippingCost = _customer.isFromUSA() ? 5 : 35;
         return shippingCost;
     }
 
-    public float CalculateTotalPrice()
+    public double CalculateTotalPrice()
     {
-        float totalprice = 0;
+        double totalprice = 0;
 
         foreach (Product p in _products) 
         {
-            float price = p.CalculatePrice();
+            double price = p.CalculatePrice();
             totalprice += price;
         }
 
-        float shippingCost = CalculateShipping();
+        double shippingCost = CalculateShipping();
         totalprice += shippingCost;
         return totalprice;
     }
 
-    public string PackingLabel()
+    public string GeneratePackingLabel()
     {
         string packingLabel = "Packing Label:\n";
-
         foreach (Product p in _products) 
         {
-            packingLabel += p.GetnameProduct() + " - " + p.GetidProduct() + "\n";
+            packingLabel += p.GetName() + " - " + p.GetProductID() + "\n";
         }
         return packingLabel;
     }
 
-    public string ShippingLabel()
+    public string GenerateShippingLabel()
     {
         string shippingLabel = "Shipping Label:\n";
         shippingLabel += _customer.GetName() + "\n" + _customer.GenerateAddress();
         return shippingLabel;
     }
 
-    public string GetTotalCost()
+    public string GenerateTotalCost()
     {
         string totalCost = "\nProducts:\n";
-        float totalPrice = CalculateTotalPrice();
-
+        double totalPrice = CalculateTotalPrice();
         foreach (Product p in _products) 
         {
             totalCost += p.GetName() + " (" + p.GetProductID() + ") - " + "$" + p.GetPrice() + " x " + p.GetQuantity() + " = " + p.CalculatePrice() + "\n";
@@ -68,9 +66,9 @@ public class Order
 
     public void DisplayResults()
     {
-        string packingLabel = PackingLabel();
-        string shippingLabel = ShippingLabel();
-        string totalCost = GetTotalCost();
+        string packingLabel = GeneratePackingLabel();
+        string shippingLabel = GenerateShippingLabel();
+        string totalCost = GenerateTotalCost();
 
         Console.WriteLine(packingLabel);
         Console.WriteLine(shippingLabel);

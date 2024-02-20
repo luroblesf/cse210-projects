@@ -15,14 +15,9 @@ public class Address
         _country = country;
     }
 
-    public bool isUSA()
+    public string GenerateCompleteAddress()
     {
-        return _country == "USA" ? true : false;
-    }
-
-    public string GenerateAddress()
-    {
-        string address = _street + ", " + _city + "\n" + _state + ", " + _country;
+        string address = _street + ", " + _city + ", " + _state + ", " + _country;
         return address;
     }
 }

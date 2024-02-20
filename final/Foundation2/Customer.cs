@@ -11,9 +11,9 @@ public class Customer
         _address = address;
     }
 
-    public bool usaCustomer()
+    public bool isFromUSA()
     {
-        return _address.customerInUSA() ? true : false;
+        return _address.isUSA() ? true : false;
     }
     
     public string GetName()

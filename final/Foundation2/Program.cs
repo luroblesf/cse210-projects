@@ -42,7 +42,7 @@ class Program
 
         
         Address address3 = new Address("2010 W 500 S", "Salt Lake", "UT 84104", "USA");
-        Customer customer3 = new Customer("Dario G. Mostacero", address3);
+        Customer customer3 = new Customer("Joel William McLean", address3);
         List<Product> productsList3 = new List<Product>();
 
         Product p301 = new Product("Miracle Gro", "F993W", 16.50, 1);

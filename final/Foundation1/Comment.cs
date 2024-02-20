@@ -1,34 +1,16 @@
 using System;
 
-class Comment
+public class Comment
 {
     private string _name;
     private string _text;
-
-    public string GetName()
-    {
-        return _name;
-    }
-
-    public string GetText()
-    {
-        return _text;
-    }
-
-    public void SetName(string name)
+    public Comment(string name, string text)
     {
         _name = name;
-    }
-
-    public void SetText(string text)
-    {
         _text = text;
     }
-
     public void DisplayInfo()
     {
         Console.WriteLine($"{_name} - {_text}");
     }
-
-    
 }
