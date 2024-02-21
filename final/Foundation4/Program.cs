@@ -22,5 +22,7 @@ class Program
         {
             Console.WriteLine(exercise.GetSummary());
         }
+
+        Console.WriteLine();
     }
 }

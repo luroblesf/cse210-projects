@@ -6,7 +6,7 @@ class Program
     {
         Address address = new Address("Conference Center", "Salt Lake City", "Utah", "USA");
 
-        Lecture lecture = new Lecture("General Conference", "The Church of Jesus Christ of Latter-Day Saints", "April 6, 2024", "10:00am - 12:00pm MT", address, "Pres. Russell M. Nelson", 21,000);
+        Lecture lecture = new Lecture("General Conference", "The Church of Jesus Christ of Latter-Day Saints", "April 6, 2024", "10:00am - 12:00pm MT", address, "Pres. Russell M. Nelson", 21000);
         Console.WriteLine();
 
         Console.WriteLine("Event Number: 1");
@@ -49,5 +49,6 @@ class Program
 
         Console.WriteLine();
         Console.WriteLine(outdoorGathering.GenerateShortOutdoorGathering());
+        Console.WriteLine();
     }
 }
